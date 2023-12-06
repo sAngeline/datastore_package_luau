@@ -1,0 +1,12 @@
+{
+  "name": "datastore_package_luau",
+  "tree": {
+    "$className": "DataModel",
+
+    "ReplicatedStorage": {
+      "ReplicatedStorage": {
+        "$path": "src/ReplicatedStorage"
+      }
+    }
+  }
+}
