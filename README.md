@@ -1,10 +1,13 @@
-What it has:
+# Datastore package (LUAU)
+# What it has
+
 - Both client & server implementation
 - Global updates implementation
 - Uses lua-promises
 - Type-checked
 
-API:
+## API
+```
 Datastore.client:
 - Return the client module, can only be viewed on the client
 - client.get() :: Promise<Replica>
@@ -23,8 +26,10 @@ Datastore._data:
 Datastore._global_update
 - Internal
 - Return the global update module
+```
 
-
+## Code Exemple
+```Lua
 -- Serverscript in ServerScriptService:
 local Players = game:GetService("Players")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
@@ -40,5 +45,8 @@ end)
 Players.PlayerRemoving:Connect(function(player: Player)
   datastore.remove(player)
 end)
+```
+
+## License
 
 Licensed under GNU General Public License v3.0
