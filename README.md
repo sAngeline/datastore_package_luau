@@ -38,7 +38,7 @@ local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local datastore = require(ReplicatedStorage.datastore)
 
 Players.PlayerAdded:Connect(function(player: Player)
-  local Replica = datastore.handle()
+  local Replica = datastore.handle(player)
   local Player_Data: datastore.player_data = Replica.Data
   
   -- Do stuff like a leaderstats or something
